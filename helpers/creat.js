@@ -5,9 +5,9 @@ const createBook = async(req,res)=>{
     try{
         const newBook = new book(req.body);
         const bookAdded = await newBook.save();
-        res.json(bookAdded).status(200);
+        res.status(201).json(bookAdded);
     }catch(error){
-        res.json(error).status(500);
+        res.status(500).json(error.message);
     }
 }
 
