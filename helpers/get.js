@@ -18,7 +18,7 @@ const getOneBook = async(req,res)=>{
         let oneBook = await book.findOne({_id:bookId});
         console.log(oneBook)
         if(oneBook == null){
-            res.status(404).json("The book id is not proper");
+            res.status(404).json("The book does not exist");
         }else{
             res.status(200).json(oneBook);
         }
