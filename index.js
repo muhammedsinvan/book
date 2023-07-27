@@ -1,13 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
 import router from "./routers/routes.js";
+import { connectDb } from "./config/db.js";
 
 const app = express();
 dotenv.config();
 
+connectDb();
+
 app.use(express.json({limit:'25mb'}));
 
-app.use('/',router)
+app.use('/',router);
 
 const PORT = process.env.PORT || 3000;
 
