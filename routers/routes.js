@@ -7,15 +7,20 @@ import { deleteOneBook } from "../helpers/delete.js";
 
 const router = express.Router();
 
+//Retrieve all books from the server
 router.get('/getallbooks',getAllBooks);
 
+//Retrieve a specific book by its ID
 router.get('/getonebook/:bookid',getOneBook);
 
+//Add a new book to the collection
 router.post('/newbook',createBook);
 
-router.put('/updateonebook/:bookid',updateOneBook)
+//Update an existing book by its ID
+router.put('/updateonebook/:bookid',updateOneBook);
 
-router.delete('/deleteonebook/:bookid',deleteOneBook)
+//Delete a book by its ID
+router.delete('/deleteonebook/:bookid',deleteOneBook);
 
 
 export default router;
