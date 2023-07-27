@@ -1,10 +1,12 @@
 import express from "express";
-import { getAllBooks } from "../helpers/get.js";
+import { getAllBooks,getOneBook } from "../helpers/get.js";
 
 
 const router = express.Router();
 
 router.get('/getallbooks',getAllBooks)
+
+router.get('/getonebook/:bookid',getOneBook)
 
 
 export default router;
