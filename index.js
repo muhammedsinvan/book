@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import router from "./routers/routes.js";
 import { connectDb } from "./config/db.js";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
@@ -9,6 +10,8 @@ dotenv.config();
 connectDb();
 
 app.use(express.json({limit:'25mb'}));
+app.use(express.urlencoded({limit:'25mb',extended:true}))
+app.use(cors())
 
 app.use('/',router);
 
