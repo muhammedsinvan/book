@@ -16,7 +16,6 @@ const getOneBook = async(req,res)=>{
     const bookId = req.params.bookid;
     try{
         let oneBook = await book.findOne({_id:bookId});
-        console.log(oneBook)
         if(oneBook == null){
             res.status(404).json("The book does not exist");
         }else{
