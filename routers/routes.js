@@ -16,7 +16,6 @@ router.get('/getallbooks',getAllBooks);
 router.get('/getonebook/:bookid',getOneBook);
 
 //Add a new book to the collection
- //router.post('/newbook',createBook);
 router.post('/newbook',validate,(req,res,next)=>{
     const errors = validationResult(req);
     const err = errors.array();
