@@ -1,6 +1,6 @@
-# book
+# Book
 
-# nodejs-express-crud-example
+# nodejs-express-crud-api
 
 Create a REST endpoint with Node.js and Express.js. You will have a working UI component enabling CRUD functionality in minutes!
 
